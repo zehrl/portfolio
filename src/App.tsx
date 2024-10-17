@@ -6,6 +6,8 @@ import { ReactComponent as DownloadIcon } from './assets/download-icon.svg';
 import SweetwaterLogo from './assets/sweetwater-logo.png';
 import IngersollRandLogo from './assets/ingersoll-rand-logo.png';
 import HoneywellLogo from './assets/honeywell-logo.png';
+import UniversityOfWashingtonLogo from './assets/university-of-washington-logo.png';
+import PurdueLogo from './assets/purdue-logo.png';
 
 const App = () => {
   return (
@@ -20,7 +22,7 @@ const App = () => {
       {/* Navbar */}
 
       <div
-        className='bg-dark flex flex-col'
+        className='bg-dark flex flex-col pb-8'
       >
         {/* SectionTitle */}
         <SectionTitle
@@ -66,6 +68,27 @@ const App = () => {
       </div>
 
       {/* SectionTitle */}
+      <div className='pb-8'>
+        <SectionTitle
+          name="Education"
+          theme='dark'
+        />
+        <Education
+          logo={UniversityOfWashingtonLogo}
+          degreeName={"Full-Stack Web Development Certification"}
+          school={"University of Washington"}
+          years={"2021"}
+          skills={["Javascript", "CSS", "HTML", "ReactJS", "ExpressJS", "NodeJS", "MongoDB", "Git", "Auth"]}
+        />
+        <Education
+          logo={PurdueLogo}
+          degreeName={"BS in Mechanical Engineering"}
+          school={"Purdue University"}
+          years={"2017"}
+          skills={["Calculus", "Excel", "Statistics", "Data Analytics", "System Design", "Physics", "Design"]}
+        />
+      </div>
+
       {/* Education */}
       {/* Education */}
 
@@ -142,18 +165,22 @@ const Header = () => {
 }
 interface SectionTitleI {
   name: string;
+  theme?: 'light' | 'dark';
 }
 
 const SectionTitle = (props: SectionTitleI) => {
+  const theme = props.theme || 'light';
   return (
     <h1
-      className='
-        text-4xl text-center font-serif text-primary font
+      className={`
+        text-4xl text-center font-serif font
         px-4 pt-8 pb-4
-      '
+        ${theme === 'light' ? 'text-primary' : 'text-dark'}
+      `}
     >{props.name}</h1>
   )
 }
+
 interface WorkExperienceI {
   companyLogo: string;
   positionTitle: string;
@@ -170,11 +197,7 @@ const WorkExperience = (props: WorkExperienceI) => {
         <img className='w-36' alt={`${props.company} logo`} src={props.companyLogo}></img>
         <p className='font-semibold'>{props.positionTitle}</p>
         <p className='font-light'>{props.company} | {props.years}</p>
-        <ul className='flex flex-row flex-wrap gap-x-2.5 gap-y-3 py-1.5 justify-center font-serif text-dark text-xs font-medium'>
-          {props.skills.map((skill: string) => {
-            return (<li key={skill} className='bg-primary rounded-full py-0.5 px-2.5'><span>{skill}</span></li>)
-          })}
-        </ul>
+        <SkillList skills={props.skills} />
       </div>
       <ul className='italic text-xs font-light list-disc list-inside leading-5 space-y-2.5'>
         {props.experience.map(bulletPoint => {
@@ -182,6 +205,44 @@ const WorkExperience = (props: WorkExperienceI) => {
         })}
       </ul>
     </div>
+  )
+}
+
+interface EducationI {
+  logo: string;
+  degreeName: string;
+  school: string;
+  years: string;
+  skills: string[];
+}
+
+const Education = (props: EducationI) => {
+  return (
+    <div className='flex flex-col px-4 p-7 pb-4 gap-4 items-center'>
+      <div className='flex flex-col items-center'>
+        <img className='w-36 pb-4' alt={`${props.school} logo`} src={props.logo}></img>
+        <p className='font-semibold'>{props.degreeName}</p>
+        <p className='font-light'>{props.school} | {props.years}</p>
+      </div>
+      <SkillList skills={props.skills} theme="dark" />
+    </div>
+  )
+}
+
+
+interface SkillListI {
+  skills: string[];
+  theme?: 'light' | 'dark';
+}
+
+const SkillList = (props: SkillListI) => {
+  const theme = props.theme || 'light';
+  return (
+    <ul className={`flex flex-row flex-wrap gap-x-2.5 gap-y-3 py-1.5 justify-center font-serif text-xs font-medium ${theme === 'light' ? 'text-dark' : 'text-primary'}`}>
+      {props.skills.map((skill: string) => {
+        return (<li key={skill} className={`rounded-full py-0.5 px-2.5 ${theme === 'light' ? 'bg-primary' : 'bg-dark'}`}><span>{skill}</span></li>)
+      })}
+    </ul>
   )
 }
 
