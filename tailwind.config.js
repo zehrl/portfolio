@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Inter', 'Arial', 'sans-serif'],
-      'serif': ['Aleo', 'Times New Roman', 'serif']
+      'serif': ['Aleo', 'Times New Roman', 'serif'],
+      'handwriting': ['Rock Salt', 'Brush Script MT', 'cursive']
     },
     colors: {
       'primary': '#EAE6D8',

@@ -4,6 +4,7 @@ import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
 import { ReactComponent as EmailIcon } from './assets/email-icon.svg';
 import { ReactComponent as DownloadIcon } from './assets/download-icon.svg';
 import { ReactComponent as UpArrowIcon } from './assets/up-arrow-icon.svg';
+import { ReactComponent as ArrowTurnDownIcon } from './assets/arrow-turn-down-icon.svg';
 import SweetwaterLogo from './assets/sweetwater-logo.png';
 import IngersollRandLogo from './assets/ingersoll-rand-logo.png';
 import HoneywellLogo from './assets/honeywell-logo.png';
@@ -199,11 +200,19 @@ const Header = () => {
         gap-2
       ">
 
-        <img alt="Logan Zehr" src={pictureOfMe} className="
+        <div>
+          <div className='flex flex-row justify-end items-start relative left-6 top-2 rotate-12'>
+            <span className='font-handwriting text-dark'>me</span>
+            <div className='pt-4 rotate-12'>
+              <ArrowTurnDownIcon className='w-6 h-6 fill-dark'/>
+            </div>
+          </div>
+          <img alt="Logan Zehr" src={pictureOfMe} className="
           w-36 h-36
           rounded-3xl border border-dark
           drop-shadow-flat
-        "/>
+          "/>
+        </div>
 
         <div className="text-center">
           <p className="
