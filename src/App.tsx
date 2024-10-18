@@ -14,6 +14,7 @@ import PurdueLogo from './assets/purdue-logo.png';
 import AWSCertifiedCloudPractitionerCertification from './assets/aws-certified-cloud-practitioner-certification-icon.png'
 import HoneywellLogoCondensed from './assets/honeywell-logo-condensed.png'
 import NCEESLogo from './assets/ncees-logo.png'
+import { useState } from 'react';
 
 const App = () => {
   return (
@@ -28,37 +29,7 @@ const App = () => {
       <Container
         theme='light'
       >
-        <nav className='flex flex-row justify-center gap-2.5 flex-wrap px-4'>
-          <a href="/overview"
-            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
-            hover:bg-tertiary-light duration-200 ease-in-out'
-          >
-            <CircleIcon className='fill-dark inline-block'></CircleIcon>
-            <span>Overview</span>
-          </a>
-          <a href="/work-experience"
-            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
-            hover:bg-tertiary-light duration-200 ease-in-out'
-          >
-            <CircleIcon className='fill-dark inline-block'></CircleIcon>
-            <span>Work Experience</span>
-          </a>
-          <a href="/projects"
-            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
-            hover:bg-tertiary-light duration-200 ease-in-out'
-          >
-            <CircleIcon className='fill-dark inline-block'></CircleIcon>
-            <span>Projects</span>
-          </a>
-          <a href="/music"
-            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
-            hover:bg-tertiary-light duration-200 ease-in-out'
-          >
-            <CircleIcon className='fill-dark inline-block'></CircleIcon>
-            <span>Music</span>
-          </a>
-        </nav>
-
+        <Navbar></Navbar>
       </Container>
 
       {/* Work Experience */}
@@ -173,6 +144,36 @@ const App = () => {
     </div>
 
   );
+}
+
+const Navbar = () => {
+  return (
+    <nav className='flex flex-row justify-center gap-2.5 flex-wrap px-4'>
+      {/* <NavBtn href="/overview" title="Overview" /> */}
+      <NavBtn href="/work-experience" title="Work Experience" />
+      {/* <NavBtn href="/projects" title="Projects" /> */}
+      {/* <NavBtn href="/music" title="Music" /> */}
+    </nav>
+  )
+}
+
+interface NavBtnI {
+  href: string;
+  title: string;
+}
+
+const NavBtn: React.FC<NavBtnI> = (props) => {
+  const [selected, setSelected] = useState(false);
+
+  return (
+    <a href={props.href}
+      className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
+            hover:bg-tertiary-light duration-200 ease-in-out'
+    >
+      <CircleIcon className={`${selected ? 'fill-primary' : 'fill-dark'} inline-block`}></CircleIcon>
+      <span>{props.title}</span>
+    </a>
+  )
 }
 
 const Footer = () => {
