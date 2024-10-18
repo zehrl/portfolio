@@ -5,6 +5,7 @@ import { ReactComponent as EmailIcon } from './assets/email-icon.svg';
 import { ReactComponent as DownloadIcon } from './assets/download-icon.svg';
 import { ReactComponent as UpArrowIcon } from './assets/up-arrow-icon.svg';
 import { ReactComponent as ArrowTurnDownIcon } from './assets/arrow-turn-down-icon.svg';
+import { ReactComponent as CircleIcon } from './assets/circle-icon.svg';
 import SweetwaterLogo from './assets/sweetwater-logo.png';
 import IngersollRandLogo from './assets/ingersoll-rand-logo.png';
 import HoneywellLogo from './assets/honeywell-logo.png';
@@ -21,14 +22,50 @@ const App = () => {
       bg-primary
       text-dark
     ">
-
       <Header></Header>
 
       {/* Navbar */}
-
-      <div
-        className='bg-dark flex flex-col pb-8'
+      <Container
+        theme='light'
       >
+        <nav className='flex flex-row justify-center gap-2.5 flex-wrap px-4'>
+          <a href="/overview"
+            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
+            hover:bg-tertiary-light duration-200 ease-in-out'
+          >
+            <CircleIcon className='fill-dark inline-block'></CircleIcon>
+            <span>Overview</span>
+          </a>
+          <a href="/work-experience"
+            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
+            hover:bg-tertiary-light duration-200 ease-in-out'
+          >
+            <CircleIcon className='fill-dark inline-block'></CircleIcon>
+            <span>Work Experience</span>
+          </a>
+          <a href="/projects"
+            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
+            hover:bg-tertiary-light duration-200 ease-in-out'
+          >
+            <CircleIcon className='fill-dark inline-block'></CircleIcon>
+            <span>Projects</span>
+          </a>
+          <a href="/music"
+            className='flex flex-row items-center gap-2 bg-tertiary text-primary py-1 px-2  rounded-full font-serif border border-dark drop-shadow-flat
+            hover:bg-tertiary-light duration-200 ease-in-out'
+          >
+            <CircleIcon className='fill-dark inline-block'></CircleIcon>
+            <span>Music</span>
+          </a>
+        </nav>
+
+      </Container>
+
+      {/* Work Experience */}
+      <Container
+        theme='dark'
+      >
+
         {/* SectionTitle */}
         <SectionTitle
           name="Work Experience"
@@ -70,10 +107,12 @@ const App = () => {
             "Trained and certified operators to aerospace processes increasing factory productivity and expertise"]}
         />
 
-      </div>
+      </Container>
 
-      {/* SectionTitle */}
-      <div className='pb-8'>
+      {/* Education */}
+      <Container
+        theme='light'
+      >
         <SectionTitle
           name="Education"
           theme='dark'
@@ -92,10 +131,12 @@ const App = () => {
           years={"2017"}
           skills={["Calculus", "Excel", "Statistics", "Data Analytics", "System Design", "Physics", "Design"]}
         />
-      </div>
+      </Container>
 
-      {/* SectionTitle */}
-      <div className='bg-dark'>
+      {/* Certifications */}
+      <Container
+        theme='dark'
+      >
         <SectionTitle
           name="Certifications"
           theme='light'
@@ -118,51 +159,70 @@ const App = () => {
           agency={"NCEES"}
           years={"2017"}
         />
-      </div>
+      </Container>
 
       {/* TakeMeBackUpBtn */}
-      <a href="#header" className='flex flex-row justify-center items-center gap-1.5 p-4 bg-dark'>
+      <a href="#header" className='flex flex-row justify-center items-center gap-1.5 p-4 bg-dark hover:opacity-90 opacity-100 ease-in-out duration-200'>
         <UpArrowIcon className='fill-primary' />
         <span className='font-serif text-primary'>Take me back up</span>
       </a>
 
       {/* Footer */}
-      <footer className='flex flex-col items-center gap-4 px-4 py-4 bg-secondary'>
-        <p className='font-thin italic text-xs'>I would love to connect 💻</p>
-        <ContactList></ContactList>
-      </footer>
+      <Footer></Footer>
 
     </div>
 
   );
 }
 
+const Footer = () => {
+  return (
+    <footer className='flex flex-col items-center gap-4 px-4 py-4 bg-secondary'>
+      <p className='font-thin italic text-xs'>I would love to connect 💻</p>
+      <ContactList></ContactList>
+    </footer>
+  )
+}
+
+interface ContainerI {
+  children: React.ReactNode;
+  theme?: 'light' | 'dark';
+}
+
+const Container: React.FC<ContainerI> = ({ children, theme = 'light' }) => {
+  return (
+    <div className={`${theme === 'light' ? 'bg-primary text-dark' : 'bg-dark text-primary'}`}>
+      <div className="container max-w-xl mx-auto py-4">
+        {children}
+      </div>
+    </div>
+  );
+}
+
 const ContactList = () => {
   return (
     <div className='flex flex-row items-center'>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/logan-j-zehr/" className='p-2'>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/logan-j-zehr/" className='p-2 fill-dark ease-in-out hover:fill-light-dark duration-200'>
         <LinkedInIcon></LinkedInIcon>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/zehrl" className='p-2'>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/zehrl" className='p-2 fill-dark ease-in-out hover:fill-light-dark duration-200'>
         <GithubIcon></GithubIcon>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="mailto:zehrl315@outlook.com" className='p-2'>
+      <a target="_blank" rel="noopener noreferrer" href="mailto:zehrl315@outlook.com" className='p-2 fill-dark ease-in-out hover:fill-light-dark duration-200'>
         <EmailIcon></EmailIcon>
       </a>
 
       <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e9qUtyy_4BWa2A-cZPNxOQM8le_cFsJY/view?usp=sharing"
         className='
-        flex flex-row items-center
-        m-2
-        px-2
-        py-1
-        gap-1
-        bg-secondary
-        rounded-3xl border border-dark
-        drop-shadow-flat
-    '><DownloadIcon className='inline'></DownloadIcon><span className='font-serif text-xs'>Resume</span></a>
+          flex flex-row items-center
+          m-2 px-2 py-1 gap-1
+          bg-secondary
+          rounded-3xl border border-dark
+          drop-shadow-flat
+          ease-in-out hover:bg-primary duration-200
+        '><DownloadIcon className='inline'></DownloadIcon><span className='font-serif text-xs'>Resume</span></a>
     </div>
   )
 }
@@ -177,10 +237,10 @@ interface CertificationI {
 const Certification = (props: CertificationI) => {
   return (
     <div className='column-3 text-primary py-4 px-4 flex flex-row gap-4'>
-      <div className='basis-5/12 text-right'>
+      <div className='basis-4/12 text-right'>
         <img className='w-14 inline-block' alt={`${props.logo} logo`} src={props.logo}></img>
       </div>
-      <div className='basis-7/12'>
+      <div className='basis-8/12'>
         <p className='font-normal text-sm pb-1'>{props.certificationName}</p>
         <p className='font-light text-xs'>{props.agency} | {props.years}</p>
       </div>
@@ -192,7 +252,7 @@ const Header = () => {
   return (
     <header className="
       flex flex-col items-center
-      pt-24 pb-2 gap-2
+      pb-2 gap-2
     "
       id='header'>
       <div className="
@@ -201,10 +261,10 @@ const Header = () => {
       ">
 
         <div>
-          <div className='flex flex-row justify-end items-start relative left-6 top-2 rotate-12'>
+          <div className='flex flex-row justify-end items-start relative left-6 top-2 rotate-12 hover:scale-125 hover:cursor-default ease-in-out duration-200'>
             <span className='font-handwriting text-dark'>me</span>
             <div className='pt-4 rotate-12'>
-              <ArrowTurnDownIcon className='w-6 h-6 fill-dark'/>
+              <ArrowTurnDownIcon className='w-6 h-6 fill-dark' />
             </div>
           </div>
           <img alt="Logan Zehr" src={pictureOfMe} className="
@@ -240,7 +300,7 @@ const SectionTitle = (props: SectionTitleI) => {
     <h1
       className={`
         text-4xl text-center font-serif font
-        px-4 pt-8 pb-4
+        p-4
         ${theme === 'light' ? 'text-primary' : 'text-dark'}
       `}
     >{props.name}</h1>
