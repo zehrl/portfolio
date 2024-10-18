@@ -121,14 +121,49 @@ const App = () => {
 
       {/* TakeMeBackUpBtn */}
       <a href="#header" className='flex flex-row justify-center items-center gap-1.5 p-4 bg-dark'>
-        <UpArrowIcon className='fill-primary'/>
+        <UpArrowIcon className='fill-primary' />
         <span className='font-serif text-primary'>Take me back up</span>
       </a>
 
       {/* Footer */}
+      <footer className='flex flex-col items-center gap-4 px-4 py-4 bg-secondary'>
+        <p className='font-thin italic text-xs'>I would love to connect 💻</p>
+        <ContactList></ContactList>
+      </footer>
+
     </div>
 
   );
+}
+
+const ContactList = () => {
+  return (
+    <div className='flex flex-row items-center'>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/logan-j-zehr/" className='p-2'>
+        <LinkedInIcon></LinkedInIcon>
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/zehrl" className='p-2'>
+        <GithubIcon></GithubIcon>
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="mailto:zehrl315@outlook.com" className='p-2'>
+        <EmailIcon></EmailIcon>
+      </a>
+
+      <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e9qUtyy_4BWa2A-cZPNxOQM8le_cFsJY/view?usp=sharing"
+        className='
+        flex flex-row items-center
+        m-2
+        px-2
+        py-1
+        gap-1
+        bg-secondary
+        rounded-3xl border border-dark
+        drop-shadow-flat
+    '><DownloadIcon className='inline'></DownloadIcon><span className='font-serif text-xs'>Resume</span></a>
+    </div>
+  )
 }
 
 interface CertificationI {
@@ -180,33 +215,8 @@ const Header = () => {
 
       </div>
 
-      <div className='
-        flex flex-row items-center
-      '>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/logan-j-zehr/" className='p-2'>
-          <LinkedInIcon></LinkedInIcon>
-        </a>
+      <ContactList></ContactList>
 
-        <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/zehrl" className='p-2'>
-          <GithubIcon></GithubIcon>
-        </a>
-
-        <a target="_blank" rel="noopener noreferrer" href="mailto:zehrl315@outlook.com" className='p-2'>
-          <EmailIcon></EmailIcon>
-        </a>
-
-        <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e9qUtyy_4BWa2A-cZPNxOQM8le_cFsJY/view?usp=sharing"
-          className='
-            flex flex-row items-center
-            m-2
-            px-2
-            py-1
-            gap-1
-            bg-secondary
-            rounded-3xl border border-dark
-            drop-shadow-flat
-        '><DownloadIcon className='inline'></DownloadIcon><span className='font-serif text-xs'>Resume</span></a>
-      </div>
     </header >
   )
 }
