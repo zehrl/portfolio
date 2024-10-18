@@ -3,6 +3,7 @@ import { ReactComponent as LinkedInIcon } from './assets/linkedin-icon.svg';
 import { ReactComponent as GithubIcon } from './assets/github-icon.svg';
 import { ReactComponent as EmailIcon } from './assets/email-icon.svg';
 import { ReactComponent as DownloadIcon } from './assets/download-icon.svg';
+import { ReactComponent as UpArrowIcon } from './assets/up-arrow-icon.svg';
 import SweetwaterLogo from './assets/sweetwater-logo.png';
 import IngersollRandLogo from './assets/ingersoll-rand-logo.png';
 import HoneywellLogo from './assets/honeywell-logo.png';
@@ -93,7 +94,7 @@ const App = () => {
       </div>
 
       {/* SectionTitle */}
-      <div className='pb-8 bg-dark'>
+      <div className='bg-dark'>
         <SectionTitle
           name="Certifications"
           theme='light'
@@ -119,6 +120,11 @@ const App = () => {
       </div>
 
       {/* TakeMeBackUpBtn */}
+      <a href="#header" className='flex flex-row justify-center items-center gap-1.5 p-4 bg-dark'>
+        <UpArrowIcon className='fill-primary'/>
+        <span className='font-serif text-primary'>Take me back up</span>
+      </a>
+
       {/* Footer */}
     </div>
 
@@ -138,9 +144,9 @@ const Certification = (props: CertificationI) => {
       <div className='basis-5/12 text-right'>
         <img className='w-14 inline-block' alt={`${props.logo} logo`} src={props.logo}></img>
       </div>
-      <div className='basis-7/12 text-sm'>
-        <p className='font-light'>{props.certificationName}</p>
-        <p className='font-light'>{props.agency} | {props.years}</p>
+      <div className='basis-7/12'>
+        <p className='font-normal text-sm pb-1'>{props.certificationName}</p>
+        <p className='font-light text-xs'>{props.agency} | {props.years}</p>
       </div>
     </div>
   )
@@ -151,7 +157,8 @@ const Header = () => {
     <header className="
       flex flex-col items-center
       pt-24 pb-2 gap-2
-    ">
+    "
+      id='header'>
       <div className="
         flex flex-col items-center
         gap-2
