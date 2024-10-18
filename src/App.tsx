@@ -8,6 +8,9 @@ import IngersollRandLogo from './assets/ingersoll-rand-logo.png';
 import HoneywellLogo from './assets/honeywell-logo.png';
 import UniversityOfWashingtonLogo from './assets/university-of-washington-logo.png';
 import PurdueLogo from './assets/purdue-logo.png';
+import AWSCertifiedCloudPractitionerCertification from './assets/aws-certified-cloud-practitioner-certification-icon.png'
+import HoneywellLogoCondensed from './assets/honeywell-logo-condensed.png'
+import NCEESLogo from './assets/ncees-logo.png'
 
 const App = () => {
   return (
@@ -89,21 +92,58 @@ const App = () => {
         />
       </div>
 
-      {/* Education */}
-      {/* Education */}
-
       {/* SectionTitle */}
-      {/* Certification */}
-      {/* Certification */}
-      {/* Certification */}
+      <div className='pb-8 bg-dark'>
+        <SectionTitle
+          name="Certifications"
+          theme='light'
+        />
+        <Certification
+          logo={AWSCertifiedCloudPractitionerCertification}
+          certificationName={"AWS Certified Cloud Practitioner"}
+          agency={"Amazon Web Services"}
+          years={"2024"}
+        />
+        <Certification
+          logo={HoneywellLogoCondensed}
+          certificationName={"Six Sigma Green Belt"}
+          agency={"Honeywell Aerospace"}
+          years={"2017"}
+        />
+        <Certification
+          logo={NCEESLogo}
+          certificationName={"Engineer in Training (Mechanical Engineering)"}
+          agency={"NCEES"}
+          years={"2017"}
+        />
+      </div>
 
       {/* TakeMeBackUpBtn */}
-
       {/* Footer */}
-
     </div>
 
   );
+}
+
+interface CertificationI {
+  logo: string;
+  certificationName: string;
+  agency: string;
+  years: string;
+}
+
+const Certification = (props: CertificationI) => {
+  return (
+    <div className='column-3 text-primary py-4 px-4 flex flex-row gap-4'>
+      <div className='basis-5/12 text-right'>
+        <img className='w-14 inline-block' alt={`${props.logo} logo`} src={props.logo}></img>
+      </div>
+      <div className='basis-7/12 text-sm'>
+        <p className='font-light'>{props.certificationName}</p>
+        <p className='font-light'>{props.agency} | {props.years}</p>
+      </div>
+    </div>
+  )
 }
 
 const Header = () => {
