@@ -12,11 +12,13 @@ module.exports = {
     },
     colors: {
       'primary': '#EAE6D8',
+      'primary-light': '#f2f1ed',
       'secondary': '#C2E2CA',
       'tertiary': '#D0705F',
       'tertiary-light': '#e68a7a',
       'dark': '#233735',
-      'light-dark': '#435957'
+      'light-dark': '#435957',
+      'warning': '#C9351B'
     },
     extend: {
       dropShadow: ({ theme }) => ({
