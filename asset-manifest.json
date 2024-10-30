@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.dc0dfb31.css",
-    "main.js": "/static/js/main.37f3e937.js",
+    "main.css": "/static/css/main.3dc80bcc.css",
+    "main.js": "/static/js/main.1f6f012b.js",
+    "static/media/the-cocktail-generator.png": "/static/media/the-cocktail-generator.38fd30285e1236a201a6.png",
+    "static/media/the-weather-dashboard.png": "/static/media/the-weather-dashboard.faef8d426a82c8d6a362.png",
     "static/media/logan.jpeg": "/static/media/logan.2b25ffa11974426960aa.jpeg",
+    "static/media/eat-the-burger.png": "/static/media/eat-the-burger.a5d090c9cdffa4561776.png",
     "static/media/sweetwater-logo.png": "/static/media/sweetwater-logo.e46535648d724909a1ad.png",
     "static/media/ingersoll-rand-logo.png": "/static/media/ingersoll-rand-logo.d46c4a8850d46741bac0.png",
     "static/media/aws-certified-cloud-practitioner-certification-icon.png": "/static/media/aws-certified-cloud-practitioner-certification-icon.b28fe1b02820a6adb4a6.png",
@@ -11,16 +14,23 @@
     "static/media/github-icon.svg": "/static/media/github-icon.afad5ae1d1a0fbea9de5a0fbc64c3a23.svg",
     "index.html": "/index.html",
     "static/media/linkedin-icon.svg": "/static/media/linkedin-icon.6c90f8175adf4fb4fad60823de1d2708.svg",
+    "static/media/newspaper-icon.svg": "/static/media/newspaper-icon.2722e0ec26635ed74c43901c0b4d82f0.svg",
+    "static/media/boot-icon.svg": "/static/media/boot-icon.0329878611fd859b822d37f24d493151.svg",
     "static/media/download-icon.svg": "/static/media/download-icon.af242b31d1ea3923c85a85cde5a3de95.svg",
+    "static/media/clouds-icon.svg": "/static/media/clouds-icon.b3acf4d9fb30d382b0b77af726658015.svg",
+    "static/media/burger-icon.svg": "/static/media/burger-icon.f250191ffd0f740ae6f1991c68cc1a74.svg",
     "static/media/up-arrow-icon.svg": "/static/media/up-arrow-icon.dc56b70e9284f40f9e38a2c2d6f427b5.svg",
+    "static/media/link-icon.svg": "/static/media/link-icon.e0cb513397a97a40cfff18e80f8ab662.svg",
     "static/media/email-icon.svg": "/static/media/email-icon.f46488418056ac39455bbc89fb9edc2a.svg",
+    "static/media/cocktail-icon.svg": "/static/media/cocktail-icon.0949585877997f981c28eb67b1812380.svg",
     "static/media/arrow-turn-down-icon.svg": "/static/media/arrow-turn-down-icon.5655000ea5c23009e1f96854a4a63114.svg",
+    "static/media/circle-exclamation-icon.svg": "/static/media/circle-exclamation-icon.d2ca4c6c16f190692ef396cfb8e453ce.svg",
     "static/media/circle-icon.svg": "/static/media/circle-icon.d5ddf3a1020f1152bac9fc37b24a42bc.svg",
-    "main.dc0dfb31.css.map": "/static/css/main.dc0dfb31.css.map",
-    "main.37f3e937.js.map": "/static/js/main.37f3e937.js.map"
+    "main.3dc80bcc.css.map": "/static/css/main.3dc80bcc.css.map",
+    "main.1f6f012b.js.map": "/static/js/main.1f6f012b.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc0dfb31.css",
-    "static/js/main.37f3e937.js"
+    "static/css/main.3dc80bcc.css",
+    "static/js/main.1f6f012b.js"
   ]
 }
