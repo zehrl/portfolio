@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.3dc80bcc.css",
-    "main.js": "/static/js/main.1f6f012b.js",
+    "main.css": "/static/css/main.8573462d.css",
+    "main.js": "/static/js/main.266ac37a.js",
     "static/media/the-cocktail-generator.png": "/static/media/the-cocktail-generator.38fd30285e1236a201a6.png",
     "static/media/the-weather-dashboard.png": "/static/media/the-weather-dashboard.faef8d426a82c8d6a362.png",
     "static/media/logan.jpeg": "/static/media/logan.2b25ffa11974426960aa.jpeg",
     "static/media/eat-the-burger.png": "/static/media/eat-the-burger.a5d090c9cdffa4561776.png",
     "static/media/sweetwater-logo.png": "/static/media/sweetwater-logo.e46535648d724909a1ad.png",
+    "static/media/usc-logo.png": "/static/media/usc-logo.19a20c580d4428f2b3e1.png",
     "static/media/ingersoll-rand-logo.png": "/static/media/ingersoll-rand-logo.d46c4a8850d46741bac0.png",
     "static/media/aws-certified-cloud-practitioner-certification-icon.png": "/static/media/aws-certified-cloud-practitioner-certification-icon.b28fe1b02820a6adb4a6.png",
     "static/media/purdue-logo.png": "/static/media/purdue-logo.e42c31903185f0c8f1d6.png",
@@ -26,11 +27,11 @@
     "static/media/arrow-turn-down-icon.svg": "/static/media/arrow-turn-down-icon.5655000ea5c23009e1f96854a4a63114.svg",
     "static/media/circle-exclamation-icon.svg": "/static/media/circle-exclamation-icon.d2ca4c6c16f190692ef396cfb8e453ce.svg",
     "static/media/circle-icon.svg": "/static/media/circle-icon.d5ddf3a1020f1152bac9fc37b24a42bc.svg",
-    "main.3dc80bcc.css.map": "/static/css/main.3dc80bcc.css.map",
-    "main.1f6f012b.js.map": "/static/js/main.1f6f012b.js.map"
+    "main.8573462d.css.map": "/static/css/main.8573462d.css.map",
+    "main.266ac37a.js.map": "/static/js/main.266ac37a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dc80bcc.css",
-    "static/js/main.1f6f012b.js"
+    "static/css/main.8573462d.css",
+    "static/js/main.266ac37a.js"
   ]
 }
