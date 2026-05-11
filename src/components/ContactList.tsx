@@ -14,7 +14,7 @@ const ContactList = () => {
         <GithubIcon></GithubIcon>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="mailto:zehrl315@outlook.com" className='p-2 fill-dark ease-in-out hover:fill-light-dark duration-200'>
+      <a target="_blank" rel="noopener noreferrer" href="mailto:zehr@usc.edu" className='p-2 fill-dark ease-in-out hover:fill-light-dark duration-200'>
         <EmailIcon></EmailIcon>
       </a>
 

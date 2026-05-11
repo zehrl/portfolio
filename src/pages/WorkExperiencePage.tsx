@@ -6,6 +6,7 @@ import IngersollRandLogo from '../assets/ingersoll-rand-logo.png';
 import HoneywellLogo from '../assets/honeywell-logo.png';
 import Education from "../components/Education";
 import UniversityOfWashingtonLogo from '../assets/university-of-washington-logo.png';
+import UniversityOfSouthernCalifornia from '../assets/usc-logo.png';
 import PurdueLogo from '../assets/purdue-logo.png';
 import Certification from "../components/Certification";
 import AWSCertifiedCloudPractitionerCertification from '../assets/aws-certified-cloud-practitioner-certification-icon.png'
@@ -90,6 +91,13 @@ const WorkExperiencePage = () => {
         <SectionTitle
           name="Education"
           theme='dark'
+        />
+         <Education
+          logo={UniversityOfSouthernCalifornia}
+          degreeName={"MS in Computer Science"}
+          school={"University of Southern California"}
+          years={"2027"}
+          skills={["Java", "C++", "Database Management Systems"]}
         />
         <Education
           logo={UniversityOfWashingtonLogo}

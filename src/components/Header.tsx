@@ -34,7 +34,7 @@ const Header = () => {
         <div className="text-center">
           <p className="
             text-3xl font-medium
-          ">Full Stack Engineer</p>
+          ">Software Engineer</p>
 
           <p>Logan Zehr</p>
         </div>
