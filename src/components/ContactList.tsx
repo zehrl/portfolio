@@ -18,7 +18,7 @@ const ContactList = () => {
         <EmailIcon></EmailIcon>
       </a>
 
-      <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e9qUtyy_4BWa2A-cZPNxOQM8le_cFsJY/view?usp=sharing"
+      {/* <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1e9qUtyy_4BWa2A-cZPNxOQM8le_cFsJY/view?usp=sharing"
         className='
           flex flex-row items-center
           m-2 px-2 py-1 gap-1
@@ -26,7 +26,7 @@ const ContactList = () => {
           rounded-3xl border border-dark
           drop-shadow-flat
           ease-in-out hover:bg-primary duration-200
-        '><DownloadIcon className='inline'></DownloadIcon><span className='font-serif text-xs'>Resume</span></a>
+        '><DownloadIcon className='inline'></DownloadIcon><span className='font-serif text-xs'>Resume</span></a> */}
     </div>
   )
 }
