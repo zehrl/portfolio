@@ -97,7 +97,7 @@ const WorkExperiencePage = () => {
           degreeName={"MS in Computer Science"}
           school={"University of Southern California"}
           years={"2027"}
-          skills={["Java", "C++", "Database Management Systems"]}
+          skills={["Java", "C++", "Database Management Systems", "Image Processing", "Signal Processing", "Computer Networks", "Socket Programming"]}
         />
         <Education
           logo={UniversityOfWashingtonLogo}
